@@ -1,0 +1,29 @@
+@use 'shared/ui/tokens/variables' as *;
+
+.layout {
+  min-height: 100vh;
+  min-width: $content-size-width-page;
+  display: flex;
+  flex-direction: column;
+
+  &[data-login='true'] {
+    background-color: #302c42;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-large;
+  flex: 1;
+
+  &[data-login='true'] {
+    background: linear-gradient(
+      330.51deg,
+      rgba(255, 149, 20, 0.28) 0%,
+      rgba(255, 149, 20, 0) 33.6%,
+      rgba(255, 255, 255, 0) 62.55%,
+      rgba(255, 255, 255, 0.3) 99.25%
+    );
+  }
+}

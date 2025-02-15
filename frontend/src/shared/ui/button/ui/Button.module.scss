@@ -1,0 +1,29 @@
+@use '../../tokens/variables' as *;
+
+.button {
+  border: none;
+  border-radius: $border-radius-medium;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+
+  background-color: $color-dark-background;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-extra-small;
+
+  &[data-text='true'] {
+    padding: $spacing-small $spacing-medium;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.text {
+  color: $color-dark-neutral-primary;
+}

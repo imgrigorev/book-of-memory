@@ -1,0 +1,11 @@
+@use '../../tokens/variables' as *;
+
+.container {
+  text-decoration: none;
+}
+
+.text {
+  white-space: nowrap;
+  color: $color-dark-neutral-primary;
+}
+

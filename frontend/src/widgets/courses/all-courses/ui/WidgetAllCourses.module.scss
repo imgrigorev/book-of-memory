@@ -1,0 +1,6 @@
+@use '../../../../shared/ui/tokens/variables' as *;
+@use '../../../../shared/ui/tokens/utils' as *;
+
+.content {
+  @include grid-layout-custom(2fr 7fr);
+}

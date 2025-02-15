@@ -1,0 +1,10 @@
+@use 'shared/ui/tokens/utils' as *;
+
+.container {
+  margin: auto;
+  @include grid-layout(2);
+}
+
+.content {
+  align-content: center;
+}

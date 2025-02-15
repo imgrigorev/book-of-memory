@@ -1,0 +1,65 @@
+@use 'shared/ui/tokens/variables' as *;
+
+.header {
+  width: 100%;
+  min-width: $content-size-width-page;
+  height: 80px;
+  background-color: $color-dark-surface;
+  align-content: center;
+}
+
+.content {
+  margin: auto;
+  width: $content-size-width-min;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-large;
+}
+
+.search {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-medium;
+
+  &__log_in_container {
+    background-color: $color-dark-kelp-primary;
+  }
+
+  &__log_in_text {
+    color: $color-light-neutral-primary;
+  }
+
+  &__sign_up_container {
+    background-color: $color-dark-vista-primary;
+  }
+
+  &__sign_up_text {
+    color: $color-light-neutral-primary;
+  }
+}
+
+.log_in {
+  &__container {
+    background-color: $color-dark-kelp-primary;
+  }
+
+  &__text {
+    color: $color-light-neutral-primary;
+  }
+}
+
+.sign_up {
+  &__container {
+    background-color: $color-dark-vista-primary;
+  }
+
+  &__text {
+    color: $color-light-neutral-primary;
+  }
+}

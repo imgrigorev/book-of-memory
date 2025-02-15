@@ -1,0 +1,55 @@
+@use 'shared/ui/tokens/variables' as *;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: $color-dark-vista-primary;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: $color-dark-kelp-primary;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: $color-dark-vista-primary;
+  }
+}
+
+@mixin loaderDivMixin {
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid transparent;
+  animation: rotate linear 3s infinite;
+}
+
+.loader {
+  position: relative;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  display: block;
+  overflow: hidden;
+
+  div {
+    height: 100%;
+  }
+}
+
+.loader,
+.loader div {
+  @include loaderDivMixin;
+  border-top-color: $color-dark-vista-primary;
+  border-bottom-color: $color-dark-kelp-primary;
+}

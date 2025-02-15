@@ -1,0 +1,59 @@
+@use '../../../tokens/variables' as *;
+@use '../../../tokens/utils' as *;
+
+%shared-typography-default {
+  font-family: $font-family-default;
+  color: $color-light-neutral-primary;
+}
+
+%shared-typography-code {
+  font-family: $font-family-code;
+  color: $color-light-neutral-primary;
+}
+
+.h1 {
+  @extend %shared-typography-default;
+  font-size: get-font-size(40);
+}
+
+.h2 {
+  @extend %shared-typography-default;
+  font-size: get-font-size(32);
+}
+
+.h3 {
+  @extend %shared-typography-default;
+  font-size: get-font-size(24);
+}
+
+.code {
+  @extend %shared-typography-code;
+  font-size: get-font-size(16);
+}
+
+.a[href] {
+  text-decoration: none;
+}
+
+.sm {
+  @extend %shared-typography-default;
+  font-size: get-font-size(14);
+}
+
+.md {
+  @extend %shared-typography-default;
+  font-size: get-font-size(20);
+}
+
+.lg {
+  @extend %shared-typography-default;
+  font-size: get-font-size(24);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}

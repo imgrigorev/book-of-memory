@@ -1,0 +1,30 @@
+@use '../../../tokens/variables' as *;
+@use '../../../tokens/utils' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-extra-small;
+}
+
+.container {
+  background-color: $color-light-overlay;
+  border-radius: $border-radius-medium;
+  padding: $spacing-small $spacing-medium;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-extra-small;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $color-light-neutral-primary;
+  font-size: get-font-size(20);
+  font-family: $font-family-default;
+  resize: none;
+}

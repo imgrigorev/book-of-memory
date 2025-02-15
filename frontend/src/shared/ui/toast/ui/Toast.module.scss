@@ -1,0 +1,11 @@
+@use '../../tokens/variables' as *;
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-light-background;
+  color: $color-text;
+  padding: $spacing-normal;
+  border-radius: $border-radius-normal;
+}

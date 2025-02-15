@@ -1,0 +1,9 @@
+@use 'utils' as *;
+
+%shared-flex {
+  @include flex-layout();
+}
+
+.shared-flex {
+  @extend %shared-flex
+}

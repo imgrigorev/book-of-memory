@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+@function get-font-size($size) {
+  $font-size-base: 16;
+
+  @return calc($size / $font-size-base) * 1rem;
+}
+
+@mixin grid-layout-custom($columns, $gap: $spacing-large) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+@mixin grid-layout($columns, $gap: $spacing-large) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin flex-layout($gap: $spacing-large) {
+  display: flex;
+  gap: $gap;
+  overflow-x: auto;
+
+  &[data-gap='medium'] {
+    gap: $spacing-medium;
+  }
+
+  &[data-direction='vertical'] {
+    flex-direction: column;
+
+    &[data-reverse='true'] {
+      flex-direction: column-reverse;
+    }
+  }
+  &:not([data-direction='vertical']) {
+    flex-direction: row;
+
+    &[data-reverse='true'] {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &[data-wrap='true'] {
+    flex-wrap: wrap;
+  }
+  &:not([data-wrap='true']) {
+    flex-wrap: nowrap;
+
+    & > *:nth-child(n) {
+      flex: 1;
+    }
+  }
+}

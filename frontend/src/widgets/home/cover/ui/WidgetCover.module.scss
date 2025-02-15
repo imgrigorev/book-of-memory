@@ -1,0 +1,46 @@
+@use 'shared/ui/tokens/variables' as *;
+@use 'shared/ui/tokens/utils' as *;
+
+.section {
+  background-color: $color-light-surface;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $spacing-extra-large;
+  gap: $spacing-extra-large;
+
+  > * {
+    color: $color-dark-neutral-primary;
+  }
+}
+
+.image {
+  height: 535px;
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+
+.header {
+  align-content: center;
+
+  * {
+    color: $color-dark-neutral-primary;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-normal;
+  margin-bottom: $spacing-medium;
+
+  * {
+    color: $color-dark-neutral-primary;
+  }
+}
+
+.grid {
+  @include grid-layout-custom(2fr 1fr);
+}

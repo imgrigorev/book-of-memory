@@ -1,0 +1,46 @@
+@use '../../../tokens/variables' as *;
+@use '../../../tokens/utils' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+}
+
+.container {
+  border-radius: $border-radius-medium;
+  padding: $spacing-small $spacing-medium;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-extra-small;
+
+  &[data-variant='light'] {
+    background-color: $color-light-overlay;
+
+    .input {
+      color: $color-light-neutral-primary;
+    }
+  }
+
+  &[data-variant='dark'] {
+    background-color: $color-dark-overlay;
+
+    .input {
+      color: $color-dark-neutral-tertiary;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: get-font-size(20);
+  font-family: $font-family-default;
+}

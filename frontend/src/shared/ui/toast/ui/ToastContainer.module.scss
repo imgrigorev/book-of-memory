@@ -1,0 +1,11 @@
+@use '../../tokens/variables' as *;
+
+.container {
+  position: fixed;
+  top: $spacing-medium;
+  right: $spacing-medium;
+  z-index: $index-toast;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-normal;
+}

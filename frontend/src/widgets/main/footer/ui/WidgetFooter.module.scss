@@ -1,0 +1,42 @@
+@use '../../../../shared/ui/tokens/variables' as *;
+
+.footer {
+  width: 100%;
+  min-width: $content-size-width-page;
+  background-color: $color-dark-surface;
+  align-content: center;
+
+  &__content {
+    margin: $spacing-extra-large auto;
+    width: $content-size-width-min;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-extra-small;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-normal;
+}
+
+.company {
+  gap: $spacing-normal;
+  max-width: 415px;
+}
+
+.title {
+  color: $color-dark-neutral-primary;
+}
+
+.text {
+  color: $color-dark-neutral-tertiary;
+}

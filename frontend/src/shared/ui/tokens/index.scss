@@ -1,0 +1,39 @@
+@use 'variables' as *;
+@use 'reset' as *;
+@use 'fonts' as *;
+@use 'shared' as *;
+
+* {
+  &::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-dark-neutral-primary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: $border-radius-small;
+    border: 3px solid transparent;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: $color-light-neutral-tertiary;
+      border-color: $color-dark-neutral-primary;
+    }
+  }
+}
+
+body {
+  &::-webkit-scrollbar-thumb {
+      background-color: $color-light-neutral-tertiary;
+    border-color: $color-dark-neutral-primary;
+  }
+}

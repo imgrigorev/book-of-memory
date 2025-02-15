@@ -1,0 +1,43 @@
+@use 'shared/ui/tokens/variables' as *;
+
+.navigation {
+  background: $color-light-surface;
+  border-radius: $border-radius-big;
+  padding: $spacing-extra-small;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-normal;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacing-normal;
+  padding: $spacing-extra-small;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.item {
+  padding: $spacing-normal;
+  border-radius: $border-radius-medium;
+  cursor: pointer;
+
+  &[data-active='true'] {
+    background: $color-dark-surface;
+
+    * {
+      color: $color-dark-neutral-primary;
+    }
+  }
+}

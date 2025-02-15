@@ -1,0 +1,16 @@
+@use '../../../tokens/variables' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-large;
+  align-content: start;
+
+  &[data-painted='true'] {
+    background-color: $color-light-surface;
+  }
+
+  &[data-padding='true'] {
+    padding: $border-radius-medium;
+  }
+}

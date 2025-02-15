@@ -1,0 +1,20 @@
+@use '../../../../shared/ui/tokens/variables' as *;
+
+.header {
+  align-content: center;
+
+  * {
+    color: $color-dark-neutral-primary;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-normal;
+    margin-bottom: $spacing-medium;
+
+    * {
+      color: $color-dark-neutral-primary;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// Шрифт
+$font-family-default: 'Fira Sans Condensed', sans-serif;
+$font-family-code: 'Fira Code', monospace;
+
+// z-index
+$index-toast: 1;
+
+// border-radius
+$border-radius-extra-large: 80px;
+$border-radius-large: 40px;
+$border-radius-big: 32px;
+$border-radius-medium: 24px;
+$border-radius-normal: 16px;
+$border-radius-small: 12px;
+$border-radius-extra-small: 8px;
+
+// spacings
+$spacing-extra-large: 80px;
+$spacing-large: 40px;
+$spacing-big: 32px;
+$spacing-medium: 24px;
+$spacing-normal: 16px;
+$spacing-small: 12px;
+$spacing-extra-small: 8px;
+
+// content-size
+$content-size-width-page: 1200px;
+$content-size-width-min: 1080px;
+
+// Цветовая схема
+// dark
+$color-dark-background: #111113;
+$color-dark-surface: #181918;
+$color-dark-overlay: #212225;
+
+$color-dark-kelp: #0bd8b6;
+$color-dark-kelp-primary: rgba($color-dark-kelp, 0.98);
+$color-dark-kelp-secondary: rgba($color-dark-kelp, 0.84);
+$color-dark-kelp-tertiary: rgba($color-dark-kelp, 0.72);
+
+$color-dark-salt: #4ccce6;
+$color-dark-salt-primary: rgba($color-dark-salt, 0.96);
+$color-dark-salt-secondary: rgba($color-dark-salt, 0.84);
+$color-dark-salt-tertiary: rgba($color-dark-salt, 0.72);
+
+$color-dark-vista: #9eb1ff;
+$color-dark-vista-primary: rgba($color-dark-vista, 0.96);
+$color-dark-vista-secondary: rgba($color-dark-vista, 0.84);
+$color-dark-vista-tertiary: rgba($color-dark-vista, 0.72);
+
+$color-dark-neutral: #edeef0;
+$color-dark-neutral-primary: rgba($color-dark-neutral, 0.96);
+$color-dark-neutral-secondary: rgba($color-dark-neutral, 0.82);
+$color-dark-neutral-tertiary: rgba($color-dark-neutral, 0.68);
+
+// light
+$color-light-background: #f0f0f3;
+$color-light-surface: #f9f9fb;
+$color-light-overlay: #fcfcfd;
+
+$color-light-kelp: #007c65;
+$color-light-kelp-primary: rgba($color-light-kelp, 0.98);
+$color-light-kelp-secondary: rgba($color-light-kelp, 0.8);
+$color-light-kelp-tertiary: rgba($color-light-kelp, 0.64);
+
+$color-light-salt: #007f98;
+$color-light-salt-primary: rgba($color-light-salt, 0.96);
+$color-light-salt-secondary: rgba($color-light-salt, 0.8);
+$color-light-salt-tertiary: rgba($color-light-salt, 0.64);
+
+$color-light-vista: #4958c6;
+$color-light-vista-primary: rgba($color-light-vista, 0.96);
+$color-light-vista-secondary: rgba($color-light-vista, 0.8);
+$color-light-vista-tertiary: rgba($color-light-vista, 0.64);
+
+$color-light-neutral: #1c2024;
+$color-light-neutral-primary: rgba($color-light-neutral, 0.96);
+$color-light-neutral-secondary: rgba($color-light-neutral, 0.72);
+$color-light-neutral-tertiary: rgba($color-light-neutral, 0.54);
+
+$color-red: #fca5a5;
+$color-green: #86efac;
+$color-yellow: #fde047;
+$color-grey: #cbd5e1;
+$color-blue: #93c5fd;
+$color-pink: #f5c0ef;
+$color-text: rgba(#000000, 0.82);

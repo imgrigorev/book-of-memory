@@ -1,0 +1,23 @@
+.container {
+  width: 24px;
+  height: 24px;
+  align-content: center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &[data-size='sm'] {
+  }
+
+  &[data-size='md'] {
+    width: 24px;
+    height: 24px;
+  }
+
+  &[data-size='lg'] {
+    width: 48px;
+    height: 48px;
+  }
+}
