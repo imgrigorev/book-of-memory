@@ -1,9 +1,17 @@
 import { useForm } from 'react-hook-form';
-import { Button, ControllerInputText, wrapperOnSubmit, RequiredRule, EInputVariant } from 'shared/ui';
+import {
+  Button,
+  ControllerInputText,
+  wrapperOnSubmit,
+  RequiredRule,
+  EInputVariant,
+  Typography,
+  ETypographySize,
+} from 'shared/ui';
 import { registerApi } from '../api';
 import classes from './FeatureRegisterForm.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { ROUTE_AUTH_LOGIN } from 'shared/router/config/path.ts';
+import { ROUTE_AUTH_LOGIN, ROUTE_AUTH_REGISTER } from 'shared/router/config/path.ts';
 import { TRegister } from './FeatureRegisterForm.types.ts';
 
 export const FeatureRegisterForm = () => {
@@ -11,8 +19,8 @@ export const FeatureRegisterForm = () => {
   const { handleSubmit, control } = useForm<TRegister>();
 
   const handleCreateUser = wrapperOnSubmit(
-    handleSubmit(async data => {
-      await registerApi(data).then(() => navigate(ROUTE_AUTH_LOGIN));
+    handleSubmit(data => {
+      registerApi(data).then(() => navigate(ROUTE_AUTH_LOGIN));
     }),
   );
 
@@ -21,17 +29,8 @@ export const FeatureRegisterForm = () => {
       <ControllerInputText
         rules={RequiredRule}
         control={control}
-        name="name"
-        label="Name"
-        placeholder="John Doe"
-        defaultValue="John Doe"
-        variant={EInputVariant.DARK}
-      />
-      <ControllerInputText
-        rules={RequiredRule}
-        control={control}
-        name="email"
-        label="Email"
+        name="username"
+        label="Имя пользователя"
         defaultValue="johndoe@example.com"
         placeholder="johndoe@example.com"
         variant={EInputVariant.DARK}
@@ -41,12 +40,20 @@ export const FeatureRegisterForm = () => {
         control={control}
         name="password"
         type="password"
-        label="Password"
+        label="Пароль"
         defaultValue="qwe123ewq"
         variant={EInputVariant.DARK}
       />
 
-      <Button type="submit" text="Create account" />
+      <Button type="submit" text="Создать аккаунт" />
+
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ cursor: 'pointer' }}>
+          <Typography.Link href={ROUTE_AUTH_LOGIN} size={ETypographySize.SMALL} className={classes.elk}>
+            Войти
+          </Typography.Link>
+        </div>
+      </div>
     </form>
   );
 };

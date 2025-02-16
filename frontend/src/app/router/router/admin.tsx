@@ -1,6 +1,6 @@
 import { Navigate, RouteObject } from 'react-router-dom';
 import { ROUTE_ADMIN, ROUTE_ADMIN_DASHBOARD, ROUTE_ADMIN_PEOPLE, ROUTE_ANY } from 'shared/router';
-import { AdminDashboard } from 'pages/admin/components/AdminDashboard.tsx';
+import { AdminDashboard } from 'pages/admin/components/AdminDashboard/AdminDashboard.tsx';
 import { AdminPeople } from 'pages/admin/components/AdminPeople/AdminPeople.tsx';
 
 export const admin: RouteObject[] = [

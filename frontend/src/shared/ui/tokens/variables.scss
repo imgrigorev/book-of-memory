@@ -1,5 +1,5 @@
 // Шрифт
-$font-family-default: 'Fira Sans Condensed', sans-serif;
+$font-family-default: 'Inter Regular', sans-serif;
 $font-family-code: 'Fira Code', monospace;
 
 // z-index
@@ -24,8 +24,8 @@ $spacing-small: 12px;
 $spacing-extra-small: 8px;
 
 // content-size
-$content-size-width-page: 1200px;
-$content-size-width-min: 1080px;
+$content-size-width-page: 1400px;
+$content-size-width-min: 1000px;
 
 // Цветовая схема
 // dark
@@ -85,3 +85,6 @@ $color-grey: #cbd5e1;
 $color-blue: #93c5fd;
 $color-pink: #f5c0ef;
 $color-text: rgba(#000000, 0.82);
+
+$color-main: #ff9514a8;
+$color-background: #2c283c;

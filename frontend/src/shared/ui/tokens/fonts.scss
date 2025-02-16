@@ -1,29 +1,35 @@
 @font-face {
-  font-family: 'Fira Code';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('../assets/fonts/fira-code-regular.ttf') format('ttf'),
-    url('../assets/fonts/fira-code-regular.woff2') format('woff2'),
-    url('../assets/fonts/fira-code-regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Fira Sans Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('../assets/fonts/fira-sans-condensed-regular.ttf') format('ttf'),
-    url('../assets/fonts/fira-sans-condensed-regular.woff2') format('woff2'),
-    url('../assets/fonts/fira-sans-condensed-regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Inter Medium';
   font-style: normal;
   font-weight: bold;
   src:
-    url('../assets/fonts/fira-sans-condensed-medium.ttf') format('ttf'),
-    url('../assets/fonts/fira-sans-condensed-medium.woff2') format('woff2'),
-    url('../assets/fonts/fira-sans-condensed-medium.woff') format('woff');
+    url('../assets/fonts/Inter-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Inter-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Shlapak Script';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('../assets/fonts/Shlapak-Script.woff2') format('woff2'),
+    url('../assets/fonts/Shlapak-Script.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Spotlight Typewriter NC';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('../assets/fonts/Spotlight-Typewriter-NC.woff2') format('woff2'),
+    url('../assets/fonts/Spotlight-Typewriter-NC.woff') format('woff');
 }

@@ -16,9 +16,8 @@
   position: absolute;
   align-content: center;
   bottom: 0;
-  padding: 10px;
 
   .wrapper {
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(15px);
   }
 }

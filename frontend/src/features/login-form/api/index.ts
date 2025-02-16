@@ -1,17 +1,16 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { firebaseAuth } from 'shared/firebase';
-import { sessionActions, TUserSession } from 'app/store';
 import { TCredentials } from '../ui/FeatureLoginForm.types.ts';
+import axios from 'axios';
 
-export const signInApi = async ({ email, password }: TCredentials) => {
-  const response = await signInWithEmailAndPassword(firebaseAuth, email, password);
+export const signInApi = async ({ username, password }: TCredentials) => {
+  const response = await axios.post('http://localhost:8083/api/v1/auth', { username, password });
 
-  return response.user as unknown as TUserSession;
-};
+  console.log('response', response);
+  console.log('response', response.data.data.token);
 
-export const getUserSessionApi = async (callback: (user: TUserSession) => void) => {
-  onAuthStateChanged(firebaseAuth, user => callback(user as unknown as TUserSession));
+  window.localStorage.setItem('token', response.data.data.token);
+
+  return (response as any).data.data.token;
 };
 
 export const loginThunk = createAsyncThunk('session/login', async (request: TCredentials, thunkAPI) => {
@@ -24,17 +23,4 @@ export const loginThunk = createAsyncThunk('session/login', async (request: TCre
   } catch (e) {
     return rejectWithValue({});
   }
-});
-
-export const getUserSessionThunk = createAsyncThunk('session/user', async (_, thunkAPI) => {
-  const { dispatch } = thunkAPI;
-
-  await getUserSessionApi(user => {
-    if (user) {
-      dispatch(sessionActions.setIsAuthenticated(true));
-      dispatch(sessionActions.setUser(user as unknown as TUserSession));
-    } else {
-      dispatch(sessionActions.setIsAuthenticated(false));
-    }
-  });
 });

@@ -4,6 +4,9 @@ export const ROUTE_MAIN = '/';
 export const ROUTE_TEMP = '/temp';
 export const ROUTE_ANY = '*';
 export const ROUTE_MAP = '/map';
+export const ROUTE_HERO_LIST = '/hero-list';
+export const ROUTE_PRINT_HERO = '/print-hero';
+export const ROUTE_BOOK = '/book';
 
 export const ROUTE_CATEGORIES = '/categories';
 export const ROUTE_CATEGORIES_ITEM = (categoryId: TRouteId = ':categoryId') => `${ROUTE_CATEGORIES}/${categoryId}`;

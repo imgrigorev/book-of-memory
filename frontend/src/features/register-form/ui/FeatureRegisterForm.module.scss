@@ -1,9 +1,20 @@
 @use '../../../shared/ui/tokens/variables' as *;
 
 .content {
-  max-width: 700px;
+  width: 100%;
   display: flex;
+  padding: $spacing-normal $spacing-big;
   flex-direction: column;
   justify-content: center;
-  gap: $spacing-medium;
+  gap: $spacing-normal;
+
+  p {
+    margin: 0;
+    color: $color-dark-neutral-primary;
+    font-weight: normal;
+  }
+}
+
+.elk {
+  color: $color-dark-neutral-primary;
 }

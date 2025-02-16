@@ -3,7 +3,16 @@
 .avatar {
   width: 40px;
   height: 40px;
-  background-color: $color-dark-salt-primary;
+  background-color: $color-light-vista;
   border-radius: 50%;
   cursor: pointer;
+
+  text-align: center;
+  align-content: center;
+
+  .link {
+    color: $color-dark-neutral-primary;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }

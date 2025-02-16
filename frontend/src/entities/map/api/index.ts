@@ -8,7 +8,7 @@ export const getMap = createAsyncThunk('map/get', async (_, thunkAPI) => {
   try {
     const response = await apiGet(API_URL_MAP_BY_ID());
 
-    console.log('response', response);
+    // console.log('response', response);
 
     return fulfillWithValue([]);
   } catch (e) {

@@ -6,12 +6,15 @@ import { Loader } from 'shared/ui';
 import { getRoutesByAuth, options } from './lib';
 import { AdminLayout } from '../../pages/admin/AdminLayout.tsx';
 import { getAdminRoutes } from './lib/getAdminRoutes.ts';
+import {PrintHero} from "pages/printHero";
+import {getPrintRoutes} from "app/router/lib/getPrintRoute.ts";
 
 export const RenderRouter = () => {
   const isAuthenticated = useAppSelector(getIsAuthenticatedSessionSelector);
 
   const routesByAuth = useMemo(() => getRoutesByAuth(isAuthenticated), [isAuthenticated]);
   const routesForAdminPanel = useMemo(() => getAdminRoutes(), []);
+  const printRoute = useMemo(() => getPrintRoutes(), []);
 
   const routes = [
     {
@@ -34,6 +37,12 @@ export const RenderRouter = () => {
       ),
       children: [...routesForAdminPanel],
     },
+    {
+      element: (
+          <PrintHero></PrintHero>
+      ),
+      children: [...printRoute]
+    }
   ];
 
   return <RouterProvider router={createBrowserRouter(routes, options)} />;

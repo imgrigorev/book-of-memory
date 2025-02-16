@@ -1,0 +1,29 @@
+section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chart{
+  width: 500px;
+  height: 600px;
+  padding: 0 50px 50px;
+  border-radius: 12px;
+  background-color: white;
+  &__header{
+    border-bottom: 1px black solid;
+    margin-bottom: 20px;
+    padding: 20px 0 10px;
+    text-align: center;
+  }
+  &__age{
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 50px 50px;
+    border-radius: 12px;
+    background-color: white;
+  }
+}
+//canvas{
+//  width: 400px;
+//  height: 400px;
+//}

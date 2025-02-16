@@ -36,9 +36,6 @@
 go.work
 go.work.sum
 
-# env file
-.env
-
 ### react template
 .DS_*
 *.log

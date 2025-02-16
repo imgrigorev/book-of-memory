@@ -1,10 +1,23 @@
 @use 'shared/ui/tokens/utils' as *;
 
 .container {
+  position: relative;
   margin: auto;
-  @include grid-layout(2);
+  @include grid-layout(1);
+  height: 100vh;
+}
+
+.image {
+  height: 100vh;
 }
 
 .content {
+  width: 100%;
+  position: absolute;
   align-content: center;
+  bottom: 0;
+
+  .wrapper {
+    backdrop-filter: blur(15px);
+  }
 }

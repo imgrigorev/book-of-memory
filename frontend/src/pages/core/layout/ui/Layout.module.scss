@@ -5,19 +5,12 @@
   min-width: $content-size-width-page;
   display: flex;
   flex-direction: column;
+  background-color: #302c42;
 
-  &[data-login='true'] {
-    background-color: #302c42;
-  }
-}
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-large;
-  flex: 1;
-
-  &[data-login='true'] {
+  .container {
+    min-height: 100vh;
+    display: flex;
     background: linear-gradient(
       330.51deg,
       rgba(255, 149, 20, 0.28) 0%,
@@ -25,5 +18,20 @@
       rgba(255, 255, 255, 0) 62.55%,
       rgba(255, 255, 255, 0.3) 99.25%
     );
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-large;
+      flex: 1;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    min-width: inherit;
   }
 }

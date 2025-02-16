@@ -8,7 +8,7 @@ export const AdminLayout: FC<PropsWithChildren> = ({ children }) => {
     <div className={classes.layout}>
       <AdminSideBar></AdminSideBar>
       <div className={classes.layout__body}>
-        <AdminHeader></AdminHeader>
+        {/*<AdminHeader></AdminHeader>*/}
         <div className={classes.layout__content}>{children}</div>
       </div>
     </div>

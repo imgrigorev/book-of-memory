@@ -1,22 +1,24 @@
 @use '../../../shared/ui/tokens/variables' as *;
 
 .content {
-  max-width: 700px;
+  width: 100%;
   display: flex;
-  padding: 10px 30px;
+  padding: $spacing-normal $spacing-big;
   flex-direction: column;
   justify-content: center;
-  gap: $spacing-normal;
+  gap: $spacing-big;
 
   p {
     margin: 0;
+    color: $color-dark-neutral-primary;
+    font-weight: normal;
   }
 }
 
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: $spacing-normal;
 
   .elk {
     color: $color-dark-neutral-primary;

@@ -1,5 +1,16 @@
 .filter{
   &Block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
 
+    &__input{
+      max-width: 500px;
+    }
   }
+}
+.map {
+  width: 450px;
+  height: 400px;
 }

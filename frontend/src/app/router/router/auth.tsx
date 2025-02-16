@@ -1,10 +1,10 @@
 import { RouteObject } from 'react-router-dom';
 import { ROUTE_AUTH_LOGIN, ROUTE_AUTH_LOGIN_ELK_REDIRECT, ROUTE_AUTH_REGISTER } from 'shared/router';
 import { lazyLoadPage } from '../lib';
+import { RegisterPage } from 'pages/auth/register';
 
 const LoginElkRedirectPage = lazyLoadPage('LoginElkRedirectPage');
 const LoginPage = lazyLoadPage('LoginPage');
-const RegisterPage = lazyLoadPage('RegisterPage');
 
 export const auth: RouteObject[] = [
   {
@@ -12,11 +12,11 @@ export const auth: RouteObject[] = [
     element: <LoginPage />,
   },
   {
-    path: ROUTE_AUTH_REGISTER,
-    element: <RegisterPage />,
-  },
-  {
     path: ROUTE_AUTH_LOGIN_ELK_REDIRECT,
     element: <LoginElkRedirectPage />,
+  },
+  {
+    path: ROUTE_AUTH_REGISTER,
+    element: <RegisterPage />,
   },
 ];

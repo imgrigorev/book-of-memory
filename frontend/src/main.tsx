@@ -5,9 +5,9 @@ import { Providers } from 'app/core';
 import 'shared/ui/tokens/index.scss';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Providers>
-      <RenderRouter />
-    </Providers>
-  </StrictMode>,
+  // <StrictMode>
+  <Providers>
+    <RenderRouter />
+  </Providers>,
+  // </StrictMode>,
 );

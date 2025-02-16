@@ -33,7 +33,43 @@
 
 body {
   &::-webkit-scrollbar-thumb {
-      background-color: $color-light-neutral-tertiary;
+    background-color: $color-light-neutral-tertiary;
     border-color: $color-dark-neutral-primary;
   }
+}
+
+.ol-zoom-in {
+  color: $color-light-neutral-primary;
+  border: none;
+  font-size: 40px;
+
+  display: block;
+  margin: 1px 0 0;
+  box-shadow: 0 3px 7px rgba(2, 34, 60, 0.16);
+  border-radius: 2px;
+  background-color: #fff;
+  padding-top: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ol-zoom-out {
+  color: $color-light-neutral-primary;
+  border: none;
+  font-size: 40px;
+
+  display: block;
+  margin: 1px 0 0;
+  box-shadow: 0 3px 7px rgba(2, 34, 60, 0.16);
+  border-radius: 2px;
+  background-color: #fff;
+  padding-top: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
 }

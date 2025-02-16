@@ -1,0 +1,98 @@
+@use 'shared/ui/tokens/variables' as *;
+
+.aside {
+  height: 100vh;
+  width: 400px;
+  background-color: $color-background;
+  display: flex;
+  flex-direction: column;
+  gap: $border-radius-large;
+  padding-top: 60px;
+
+  .text {
+    color: $color-dark-neutral-primary;
+  }
+
+  .user_box {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-normal;
+    align-items: center;
+    padding: 0 $border-radius-large;
+  }
+
+  .nav {
+    flex: 1 0 auto;
+  }
+
+  .list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-big;
+  }
+
+  .link {
+    text-decoration: none;
+
+    &_active {
+      background-color: #d89043 !important;
+    }
+  }
+
+  .bookmark {
+    background-color: rgba(255, 124, 0, 0.41);
+    width: 90%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: $border-radius-large;
+    padding-left: $spacing-medium;
+    align-items: center;
+
+    &_2 {
+      width: 80%;
+    }
+
+    &_3 {
+      width: 70%;
+    }
+
+    &_4 {
+      width: 60%;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid $color-background;
+    bottom: 0;
+    right: -1px;
+  }
+
+  .button {
+    margin: 0 $border-radius-large;
+    background-color: #d89043;
+  }
+
+  a.text {
+    text-align: center;
+    align-content: center;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-medium;
+    bottom: 0;
+    margin-bottom: $spacing-large;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+  }
+}
